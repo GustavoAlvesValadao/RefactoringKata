@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GildedRoseKata;
+namespace GildedRoseKata.Models;
 
 public class Program
 {
@@ -9,8 +9,8 @@ public class Program
     {
         Console.WriteLine("OMGHAI!");
 
-        IList<Item> items = new List<Item>
-        {
+        IList<Item> items =
+        [
             new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
             new Item {Name = "Aged Brie", SellIn = 2, Quality = 0},
             new Item {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},
@@ -34,9 +34,8 @@ public class Program
                 SellIn = 5,
                 Quality = 49
             },
-            // this conjured item does not work properly yet
             new Item {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6}
-        };
+        ];
 
         var app = new GildedRose(items);
 
