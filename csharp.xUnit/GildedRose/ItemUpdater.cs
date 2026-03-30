@@ -13,7 +13,7 @@ public class ItemUpdater
             "Aged Brie" => new AgedBrieUpdater(),
             "Backstage passes to a TAFKAL80ETC concert" => new BackstagePassUpdater(),
             "Sulfuras, Hand of Ragnaros" => new SulfurasUpdater(),
-            // "Conjured Mana Cake" => new ConjuredManaCakeItemUpdater(),
+            "Conjured Mana Cake" => new ConjuredManaCakeItemUpdater(),
             _ => new NormalItemUpdater(),
         };
         updater.Update(item);
