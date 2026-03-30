@@ -2,13 +2,13 @@ using Xunit;
 using GildedRoseKata.Models;
 using GildedRoseKata;
 
-namespace GildedRoseTests.Updaters;
+namespace GildedRoseTests.StrategyUpdatersTests;
 
 public class AgedBrieUpdaterTests
 {
 
     [Fact]
-    public void AgedBrie_IncreasesQualityByOne()
+    public void AgedBrie_IncreasesQualityByOne_WhenUpdated()
     {
         var items = new[] { new Item { Name = "Aged Brie", SellIn = 2, Quality = 0 } };
         var app = new GildedRose(items);
@@ -19,7 +19,7 @@ public class AgedBrieUpdaterTests
     }
 
     [Fact]
-    public void AgedBrie_Quality_NeverMoreThan50()
+    public void AgedBrie_NeverExceeds50_WhenUpdateQuality()
     {
         var items = new[] { new Item { Name = "Aged Brie", SellIn = 2, Quality = 50 } };
         var app = new GildedRose(items);
@@ -30,7 +30,7 @@ public class AgedBrieUpdaterTests
     }
 
     [Fact]
-    public void AgedBrie_QualityRaisesIfSellInIsZero()
+    public void AgedBrie_IncreaseQuality_WhenSellInIsZero()
     {
         var items = new[] { new Item { Name = "Aged Brie", SellIn = 0, Quality = 2 } };
         var app = new GildedRose(items);
@@ -41,7 +41,7 @@ public class AgedBrieUpdaterTests
     }
 
     [Fact]
-    public void AgedBrie_IncreasesTwiceAfterExpiration()
+    public void AgedBrie_IncreasesQualityTwice_WhenExpired()
     {
         var items = new[] { new Item { Name = "Aged Brie", SellIn = -1, Quality = 10 } };
         var app = new GildedRose(items);

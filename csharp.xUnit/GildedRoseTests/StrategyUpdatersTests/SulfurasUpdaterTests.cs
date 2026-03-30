@@ -2,7 +2,7 @@ using Xunit;
 using GildedRoseKata;
 using GildedRoseKata.Models;
 
-namespace GildedRoseTests.Updaters;
+namespace GildedRoseTests.StrategyUpdatersTests;
 
 public class SulfurasUpdaterTests
 {
