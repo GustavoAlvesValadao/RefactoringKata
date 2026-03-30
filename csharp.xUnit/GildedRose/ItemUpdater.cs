@@ -1,6 +1,6 @@
 using System;
 using GildedRoseKata.Models;
-using GildedRoseKata.Updaters;
+using GildedRoseKata.StrategyUpdaters;
 
 namespace GildedRoseKata;
 

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using GildedRoseKata.Models;
-using GildedRoseKata.Updaters;
+using GildedRoseKata.StrategyUpdaters;
 
 namespace GildedRoseKata;
 
@@ -10,7 +10,7 @@ public class GildedRose(IList<Item> Items)
 
     public void UpdateQuality()
     {
-        ItemUpdater updater = new();
+        _ = new ItemUpdater();
 
         foreach (var item in Items)
         {

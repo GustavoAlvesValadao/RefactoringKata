@@ -1,6 +1,6 @@
 using GildedRoseKata.Models;
 
-namespace GildedRoseKata.Updaters;
+namespace GildedRoseKata.StrategyUpdaters;
 
 public class SulfurasUpdater : IItemUpdater
 {
